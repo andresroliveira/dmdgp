@@ -3,6 +3,19 @@ from ..Graph import Graph
 
 
 def sym(g: Graph) -> list:
+    """ 
+        Optimal algorithm to find dmdgp symmetries [1].
+
+    Args:
+        g (Graph): a DMDGP graph
+
+    Returns:
+        s (list): symmetries vertices
+
+    References:
+        [1] Lavor, C., Oliveira, A., Rocha, W. et al. On the optimality of finding DMDGP symmetries. 
+            Comp. Appl. Math. 40, 98 (2021). https://doi.org/10.1007/s40314-021-01479-6
+    """
     n = int(g)
     prune = g.prune_edges()
 
